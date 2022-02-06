@@ -77,7 +77,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: CORS_POLICY,
                       builder =>
                       {
-                          builder.WithOrigins(baseUrlConfig.WebBase.Replace("host.docker.internal", "localhost").TrimEnd('/'));
+                          builder.AllowAnyOrigin();//.WithOrigins("https://eshoponwene.azurewebsites.net", "https://eshoponwecc.azurewebsites.net");
                           builder.AllowAnyMethod();
                           builder.AllowAnyHeader();
                       });
